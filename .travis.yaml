@@ -1,0 +1,9 @@
+sudo:false
+langauge:python
+
+jobs:
+  include:   
+    - stage: docs build
+      if: type != pull_request
+      script:
+        - sh build/bin/trigger-docs-travis $TRAVIS_ACCESS_TOKEN
