@@ -1,6 +1,10 @@
 sudo:false
 langauge:python
 
+script:
+- git clean -f -d -x
+
+
 jobs:
   include:   
     - stage: docs build
